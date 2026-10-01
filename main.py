@@ -1,4 +1,3 @@
-
 # LABORATORIO: LISTAS, MATRICES Y ORDENAMIENTOS
 # Estudiante: Anderson Cruz
 
@@ -89,7 +88,6 @@ def etapa_2():
     print(f"\nLa suma total de la matriz es: {suma_total}")
 
 
-
 # ETAPA 3: ORDENAMIENTO BURBUJA
 
 
@@ -114,6 +112,35 @@ def etapa_3():
     print(numeros)
 
 
+# ETAPA 4: ORDENAMIENTO POR SELECCIÓN
+
+
+def etapa_4():
+    print("\n" + "=" * 55)
+    print("ETAPA 4: ORDENAMIENTO POR SELECCIÓN")
+    print("=" * 55)
+
+    # Lista distinta de la usada en el ordenamiento burbuja
+    numeros = [64, 25, 12, 22, 11, 90, 5, 38, 17, 42]
+
+    print("\nLista original:")
+    print(numeros)
+
+    # Busca el menor elemento y lo coloca al inicio
+    for i in range(len(numeros) - 1):
+        posicion_menor = i
+
+        for j in range(i + 1, len(numeros)):
+            if numeros[j] < numeros[posicion_menor]:
+                posicion_menor = j
+
+        numeros[i], numeros[posicion_menor] = (
+            numeros[posicion_menor],
+            numeros[i]
+        )
+
+    print("\nLista ordenada de menor a mayor:")
+    print(numeros)
 
 # PROGRAMA PRINCIPAL
 
@@ -121,3 +148,4 @@ def etapa_3():
 etapa_1()
 etapa_2()
 etapa_3()
+etapa_4()
