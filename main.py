@@ -11,9 +11,7 @@ def leer_entero(mensaje):
             print("Error: ingresa un número entero.")
 
 
-
 # ETAPA 1: LISTA UNIDIMENSIONAL
-
 
 def etapa_1():
     print("\n" + "=" * 55)
@@ -47,8 +45,50 @@ def etapa_1():
         print(f"El número {valor_buscar} no existe en la lista.")
 
 
+# ==========================================================
+# ETAPA 2: MATRIZ BIDIMENSIONAL 3x3
+# ==========================================================
+
+def etapa_2():
+    print("\n" + "=" * 55)
+    print("ETAPA 2: MATRIZ BIDIMENSIONAL 3x3")
+    print("=" * 55)
+
+    matriz = []
+
+    print("\nIngrese 9 números para llenar la matriz:")
+
+    # Crear y llenar una matriz de 3 filas por 3 columnas
+    for fila in range(3):
+        nueva_fila = []
+
+        for columna in range(3):
+            valor = leer_entero(
+                f"Ingrese el valor para la posición [{fila}][{columna}]: "
+            )
+            nueva_fila.append(valor)
+
+        matriz.append(nueva_fila)
+
+    # Mostrar la matriz en formato de filas y columnas
+    print("\nMatriz ingresada:")
+
+    for fila in range(3):
+        for columna in range(3):
+            print(f"{matriz[fila][columna]:5}", end="")
+        print()
+
+    # Calcular la suma de todos los elementos
+    suma_total = 0
+
+    for fila in range(3):
+        for columna in range(3):
+            suma_total += matriz[fila][columna]
+
+    print(f"\nLa suma total de la matriz es: {suma_total}")
+
 
 # PROGRAMA PRINCIPAL
 
-
 etapa_1()
+etapa_2()
