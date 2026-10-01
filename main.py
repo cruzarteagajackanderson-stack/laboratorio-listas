@@ -11,7 +11,9 @@ def leer_entero(mensaje):
             print("Error: ingresa un número entero.")
 
 
+
 # ETAPA 1: LISTA UNIDIMENSIONAL
+
 
 def etapa_1():
     print("\n" + "=" * 55)
@@ -45,9 +47,8 @@ def etapa_1():
         print(f"El número {valor_buscar} no existe en la lista.")
 
 
-# ==========================================================
 # ETAPA 2: MATRIZ BIDIMENSIONAL 3x3
-# ==========================================================
+
 
 def etapa_2():
     print("\n" + "=" * 55)
@@ -88,7 +89,35 @@ def etapa_2():
     print(f"\nLa suma total de la matriz es: {suma_total}")
 
 
+
+# ETAPA 3: ORDENAMIENTO BURBUJA
+
+
+def etapa_3():
+    print("\n" + "=" * 55)
+    print("ETAPA 3: ORDENAMIENTO BURBUJA")
+    print("=" * 55)
+
+    # Lista de números desordenados
+    numeros = [34, 12, 45, 7, 23, 56, 18, 3, 41, 29]
+
+    print("\nLista original:")
+    print(numeros)
+
+    # Ordenamiento burbuja, de menor a mayor
+    for i in range(len(numeros) - 1):
+        for j in range(len(numeros) - 1 - i):
+            if numeros[j] > numeros[j + 1]:
+                numeros[j], numeros[j + 1] = numeros[j + 1], numeros[j]
+
+    print("\nLista ordenada de menor a mayor:")
+    print(numeros)
+
+
+
 # PROGRAMA PRINCIPAL
+
 
 etapa_1()
 etapa_2()
+etapa_3()
